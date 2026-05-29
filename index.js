@@ -20,3 +20,42 @@ if (parolainvertita === inserisci) {
 };
 
 console.log(parolainvertita);
+
+
+///////////
+
+
+function generaNumero() {
+    return Math.floor(Math.random() * 5) + 1;
+}
+
+function pariODispari(numero) {
+
+    if (numero % 2 === 0) {
+        return "pari";
+    } else {
+        return "dispari";
+    }
+}
+
+const sceltaUtente = prompt("Scegli pari o dispari");
+
+const numeroUtente = parseInt(
+    prompt("Scegli un numero da 1 a 5")
+);
+
+const numeroComputer = generaNumero();
+
+console.log("Numero computer:", numeroComputer);
+
+const somma = numeroUtente + numeroComputer;
+
+console.log("Somma:", somma);
+
+const risultato = pariODispari(somma);
+
+if (risultato === sceltaUtente) {
+    console.log("Hai vinto");
+} else {
+    console.log("Ha vinto il computer");
+}
