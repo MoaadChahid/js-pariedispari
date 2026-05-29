@@ -46,7 +46,7 @@ const numeroUtente = parseInt(
 
 const numeroComputer = generaNumero();
 
-console.log("Numero computer:", numeroComputer);
+console.log("Numero computer", numeroComputer);
 
 const somma = numeroUtente + numeroComputer;
 
