@@ -2,16 +2,21 @@
 
 const inserisci = prompt('metti una parola palindroma')
 
-const parolautente = [];
+function invertistringa(parola) {
+    const stringa = [];
 
-function invertistringa() {
-    for (let i = inserisci.length - 1; i >= 0; i--) {
-        parolautente.push(inserisci[i]);
+    for (let i = parola.length - 1; i >= 0; i--) {
+        stringa.push(parola[i]);
     };
-
-    const parolainvertita = parolautente.join('');
-
-    console.log(parolainvertita);
+    return stringa.join('');
 }
 
+const parolainvertita = invertistringa(inserisci);
 
+if (parolainvertita === inserisci) {
+    console.log('Questa parola è palindroma')
+} else {
+    console.log('Questa parola non è palindroma')
+};
+
+console.log(parolainvertita);
